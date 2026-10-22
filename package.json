@@ -1,0 +1,27 @@
+{
+  "name": "supplychainpro-portal",
+  "version": "1.0.0",
+  "description": "SupplyChainPro – Distributed Supply Chain & Inventory Tracking Portal",
+  "scripts": {
+    "build": "npm --prefix client install && npm --prefix client run build && npm --prefix server install",
+    "build:client": "npm --prefix client run build",
+    "start": "node server/server.js",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm --prefix server start\" \"npm --prefix client run dev\"",
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "seed": "npm --prefix server run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "supply-chain",
+    "inventory-management",
+    "react",
+    "nodejs",
+    "mysql"
+  ],
+  "author": "SupplyChainPro Team",
+  "license": "ISC"
+}
