@@ -29,3 +29,5 @@ Thumbs.db
 
 # Local SQLite databases (server will create & seed automatically)
 server/data/*.sqlite-journal
+cloudflared.exe
+
